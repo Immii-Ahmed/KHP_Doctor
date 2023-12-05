@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PasswordInputField from '../PasswordField'
 
 function SignupComponent() {
+
+  const [password, setPassword] = useState('');
+  const [cpassword, setcpassword] = useState('');
+  
+
   return (
     <form>
     <div className="mb-3">
@@ -9,12 +15,8 @@ function SignupComponent() {
   <div className="mb-3">
     <input type="email" className="form-control" id="exampleInputEmail1" placeholder='Enter Email...' aria-describedby="emailHelp"/>
   </div>
-  <div className="mb-3">
-    <input type="password" className="form-control" placeholder='Enter Password...' id="exampleInputPassword1"/>
-      </div>
-      <div className="mb-3">
-    <input type="password" placeholder='Confirm Password...' className="form-control" id="exampleInputPassword1"/>
-  </div>
+      <PasswordInputField handlePasswordChange={setPassword} placeholder={'Password...' } />
+      <PasswordInputField handlePasswordChange={setcpassword} placeholder={'Confirm Password...'} />
   <button type="submit" className="btn btn-dark">SIGNUP</button>
 </form>
   )
