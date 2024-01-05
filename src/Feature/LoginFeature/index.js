@@ -7,7 +7,6 @@ function LoginFeature() {
       <Card heading={'KHP LOGIN'}>
         <LoginComponent/>
     </Card>
-    
     </>
   )
 }

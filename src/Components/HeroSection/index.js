@@ -1,10 +1,11 @@
 import React from "react";
-import PictureImage from './Astronout.png'
+import PictureImage from './heroSection.svg'
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <>
-      <div className="container py-4 py-xl-5">
+      <div className="container py-4 py-xl-5" style={{marginTop:'8rem'}}>
         <div className="row gy-4 gy-md-0">
           <div className="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
             <div style={{ maxWidth: "350px" }}>
@@ -20,24 +21,10 @@ const HeroSection = () => {
                   hope, and humanity."
                 </span>
               </p>
-              <a
-                className="btn btn-primary btn-lg me-2"
-                role="button"
-                href="#"
-                style={{
-                  background: "rgb(28, 30, 33)",
-                  borderColor: "rgb(37, 32, 32)",
-                  borderTopColor:
-                    "rgb(255,;border-right-color: 255, ;border-bottom-color: 255)",
-                  borderLeftColor: "255",
-                }}
-              >
-                Signup
-              </a>
-              <a
+              <Link
                 className="btn btn-outline-dark btn-lg"
                 role="button"
-                href="#"
+                to={'##'}
                 style={{
                   borderColor: "rgb(38, 40, 42)",
                   borderTopColor:
@@ -45,21 +32,34 @@ const HeroSection = () => {
                   borderLeftColor: "110,color: rgb(13, 13, 13)",
                 }}
               >
-                Login
-              </a>
+                Blogs
+              </Link>
+              <Link
+                className="btn btn-outline-dark btn-lg mx-3"
+                role="button"
+                to={'##'}
+                style={{
+                  borderColor: "rgb(38, 40, 42)",
+                  borderTopColor:
+                    "rgb(13,borderRightColor: 110,borderBottomColor: 253)",
+                  borderLeftColor: "110,color: rgb(13, 13, 13)",
+                }}
+              >
+                Health
+              </Link>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="p-xl-5 m-xl-5">
+          <div className="col-md-6" style={{marginTop:'5rem'}}>
+            <div className="p-xl-5 m-xl-5 d-flex justify-content-center align-items-center">
               <img
-                className="rounded img-fluid w-100 fit-cover"
+                className="rounded img-fluid w-80 fit-cover"
                 style={{
-                  minHeight: "300px",
+                  minHeight: "200px",
                   transform: "perspective(990px) translate(0px) scale(1.62)",
                 }}
                 src={PictureImage}
-                width="354"
-                height="354"
+                width="250vw"
+                height="250vh"
               />
             </div>
           </div>
