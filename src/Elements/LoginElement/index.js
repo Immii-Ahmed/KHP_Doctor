@@ -1,12 +1,13 @@
-import React from 'react'
-import { LoginFeature } from '../../Feature'
+import React from "react";
+import { Navbar } from "../../Components";
+import { LoginFeature } from "../../Feature";
 
 function LoginElement() {
   return (
-    <>
-    <LoginFeature/>
-    </>
-  )
+    <Navbar>
+      <LoginFeature/>
+    </Navbar>
+  );
 }
 
-export default LoginElement
+export default LoginElement;

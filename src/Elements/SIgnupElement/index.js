@@ -1,10 +1,11 @@
-import React from 'react'
-import { SignupFeature } from '../../Feature'
+import React from "react";
+import { SignupFeature } from "../../Feature";
+import { Navbar } from "../../Components";
 
 function SignupElement() {
   return (
-    <SignupFeature/>
-  )
+      <SignupFeature />
+  );
 }
 
-export default SignupElement
+export default SignupElement;

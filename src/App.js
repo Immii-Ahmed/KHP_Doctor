@@ -1,19 +1,18 @@
-// import Navbar from "./Components/Navbar";
-import { DocCard, HeroSection, Navbar } from "./Components";
-// import { LoginPage, SignupPage } from "./Pages";
-
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./Providers";
+import { authenticatedRoutes, unAuthenticatedRoutes } from "./Utils";
+import { Footer } from "./Components";
 
 function App() {
+  const router = createBrowserRouter([
+    ...unAuthenticatedRoutes,
+    ...authenticatedRoutes,
+  ]);
   return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <div className="card-group" style={{ margin: '4%' }}>
-      <DocCard />
-      <DocCard />
-      <DocCard/>
-    </div>
-    </>
+    <AuthProvider>
+      <RouterProvider router={router} />
+      <Footer/>
+    </AuthProvider>
   );
 }
 
